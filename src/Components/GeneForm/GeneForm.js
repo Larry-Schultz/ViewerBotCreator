@@ -40,11 +40,15 @@ class GeneForm extends Component {
         return firstAttribute.key.localeCompare(secondAttribute.key);
     }
 
+    /*
+     * Creates a form element from each gene Attribute from the winner-1000-run2.js gene file.
+     * Excludes maps, which are not in scope for this project.
+     */
     formElements(geneData) {
         return geneData.geneticAttributes
             .sort(this.sortGeneAttributes)
             .filter((geneAttribute) => geneAttribute.key)
-            .filter((geneAttribute) => !/^\d/.test(geneAttribute.key))
+            .filter((geneAttribute) => !/^\d/.test(geneAttribute.key)) //this excludes the maps, which all start with a number
             .map((geneAttribute) => {
                 const keyName = geneAttribute.key + 'Key';
                 const geneAttributeValue = geneAttribute.key;

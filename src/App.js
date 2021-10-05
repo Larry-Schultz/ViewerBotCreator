@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-
 import { observer } from "mobx-react";
 
 import './App.css';

@@ -3,9 +3,6 @@ import axios from 'axios';
 const url = 'https://fftbg.com/api/tips';
 
 export class DefaultTips {
-    constructor() {
-
-    }
 
     descriptionLookup(element) {
         return 'blank';

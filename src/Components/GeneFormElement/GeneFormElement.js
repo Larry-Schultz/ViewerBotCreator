@@ -3,10 +3,6 @@ import GeneDropdown from "../GeneDropdown/GeneDropdown";
 
 class GeneFormElement extends Component {
 
-     constructor(props) {
-         super(props);
-     }
-
      render() {
          const {geneName, updateFunction} = this.props;
          const geneLabel = geneName + 'Label';

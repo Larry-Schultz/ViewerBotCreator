@@ -10,10 +10,6 @@ export default class FilterCheckboxes extends React.Component {
         default: true
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     sendUpdatedAllowed = () => {
         const allowedSet = new Set();
         if(this.state.item) {
