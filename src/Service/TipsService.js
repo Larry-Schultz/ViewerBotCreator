@@ -20,7 +20,7 @@ export class DefaultTips {
     }
 }
 
-export class Tips {
+export class Tips extends DefaultTips {
     tips;
 
     itemTips;
@@ -29,6 +29,7 @@ export class Tips {
     classTips;
 
     constructor(response) {
+        super();
         this.tips = response.data
 
         this.itemTips = this.tips['Item'];
