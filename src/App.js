@@ -18,7 +18,7 @@ const LoadingView = observer(({loading}) => (
         <LoadingComponent loading={loading}></LoadingComponent>
 ));
 
-class App extends React.Component {
+export default class App extends React.Component {
   state = {
     data: new Map(),
     inverse: false,
@@ -87,5 +87,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App;
