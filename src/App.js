@@ -14,17 +14,6 @@ const GeneratedXmlView = observer(({dataMap, inverse, botName, description, tips
     <GeneratedXml dataMap={dataMap} inverse={inverse} botName={botName} description={description} tips={tips}></GeneratedXml>
 ));
 
-const GeneFormView = observer(({allowed, updateFunction, updateInverse, updateBotName, updateDescription, tips}) => (
-    <GeneForm
-        allowed={allowed}
-        updateFunction={updateFunction}
-        updateInverse={updateInverse}
-        updateBotName={updateBotName}
-        updateDescription={updateDescription}
-        tips={tips}
-    ></GeneForm>
-));
-
 const LoadingView = observer(({loading}) => (
         <LoadingComponent loading={loading}></LoadingComponent>
 ));
