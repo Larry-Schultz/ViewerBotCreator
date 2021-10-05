@@ -15,15 +15,17 @@ export default class GeneratedXml extends React.Component {
         }
         const paramLines = [];
         for (const [key, value] of dataMap.entries()) {
-           const newParam = "\t<param id=\"" + key + "\" description=\"" + tips.descriptionLookup(key) + "\">" + value + "</param>\n";
-            paramLines.push(newParam);
+           if(value !== 0) {
+               const newParam = "\t<param id=\"" + key + "\" description=\"" + tips.descriptionLookup(key) + "\">" + value + "</param>\n";
+               paramLines.push(newParam);
+           }
         }
         const footer = '</bot>\n';
         xml = header;
         xml = xml + inverseLine;
         paramLines.forEach((param) =>  xml = xml + param);
         xml = xml + footer;
-        this.setState({xml: xml});
+        this.xml = xml;
 
         const rows = 10 + paramLines.length;
         const textAreaStyle = {
